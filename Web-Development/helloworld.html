@@ -165,16 +165,194 @@
     <img src="" alt="">
     </p>
     <!--ul>li*5-->
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    <p>
-        <video src=""></video>
-    </p>
+
+    <!--Table-->
+    <table border="black">
+        <caption>Food Menu</caption>
+        <!--Table Header-->
+        <thead>
+            <tr>
+                <th rowspan="2">Item</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+        <!--Table-Body-->
+        <tbody>
+            <tr>
+                <td>Frooti</td>
+                <td>10</td>
+                <td>0.14</td>
+            </tr>
+            <tr>
+                <td>Ice Cream</td>
+                <td>20</td>
+                <td>0.17</td>
+            </tr>
+            <tr>
+                <td>Chips</td>
+                <td>30</td>
+                <td>0.20</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table border="black">
+        <caption> A test table with merged cells</caption>
+
+        <tbody>
+            <tr>
+                <td rowspan="2"></td>
+                <td colspan="2">Average</td>
+                <td rowspan="2">Red Eye</td>
+            </tr>
+            <tr>
+
+                <td>Height</td>
+                <td>Weight</td>
+            </tr>
+
+            <tr>
+                <td>Males</td>
+                <td>1.9</td>
+                <td>0.003</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>Females</td>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <form action="/action">
+        <br>
+        <div>
+            <label for="username">Enter Your Username:</label>
+            <input type="text" id="username" name="user" placeholder="Enter Username">
+        </div>
+
+        <div>
+            <label for="password">Enter Your Password: </label>
+            <input type="password" id="password" placeholder="Enter Password">
+        </div>
+
+        <div>
+            <label for="age">Enter Your Age: </label>
+            <input type="number" id="age" placeholder="Enter your age">
+        </div>
+        <button type="submit">Submit</button>
+        <!-- <button type="button">Submit</button>
+        <button type="reset">Reset</button>
+
+        <br>
+
+        <input type="button" value="Click me">
+        <input type="submit"> -->
+
+
+
+        <!-- Number
+        <input type="number" placeholder="Enter number">
+        <br>
+        Time
+        <input type="time">
+        <br>
+        Color
+        <input type="color"> -->
+    </form>
+    <hr>
+    <form action="https://www.youtube.com/results">
+        <p>Youtube </p>
+        <input type="text" name="search_query" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+
+    <form action="https://www.google.com/search">
+        <p>Google</p>
+        <input type="text" name="q" placeholder="Search in Google">
+        <button type="submit">Search</button>
+    </form>
+
+    <!--Checkbox-->
+    <hr>
+    <form action=/server>
+        <p>Checkbox</p>
+        <div>
+            <input type="checkbox" name="subjects" id="math">
+            <label for="math">Math</label>
+            <input type="checkbox" name="subjects" id="science">
+            <label for="science">Science</label>
+            <input type="checkbox" name="subjects" id="english">
+            <label for="english">English</label>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <!--Radio Button-->
+    <form action=/server>
+        <p>Radio Button</p>
+        <div>
+            <input type="radio" name="fruit" id="apple">
+            <label for="apple">Apple</label>
+            <input type="radio" name="fruit" id="mango">
+            <label for="mango">Mango</label>
+            <input type="radio" name="fruit" id="banana">
+            <label for="banana">Banana</label>
+            <button type="submit">Submit</button>
+        </div>
+
+        <!--Select - DropDown-->
+        <div>
+            Choose your profession
+            <select name="profession" id="professsion">
+                <option value="Engineer">Engineer</option>
+                <option value="Software Developer" selected>Developer</option>
+            </select>
+            <button>Submit</button>
+        </div>
+
+
+        <!--Range input-->
+        <input type="range" id="vol" min="0" max="100" name="vol" step="10">
+        <label for="vol">Select your volume</label>
+        <button>Submit</button>
+        <br>
+        <label for="feedback">Give your valuable feedback</label>
+        <textarea id="feedback" placeholder="Write your feedback here"></textarea>
+    </form>
+
+    <!--Registration Form Practice Qs 9-->
+    <form>
+        <h2>Registration Form</h2>
+        <div>
+            <input type="text" id="firstname" name="firstname" placeholder="First Name">
+            <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+        </div>
+        <div>
+            <label for="gender">Please Select your gender</label>
+            <select name="gender" id="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+        <div>
+            Do you agree to all terms of service?
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">Yes, I agree</label>
+        </div>
+        <button>Register</button>
+
+    </form>
+
 
 
 
