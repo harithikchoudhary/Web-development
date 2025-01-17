@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     text-align: center;
     color: red;
     text-decoration: underline;
@@ -38,4 +38,55 @@ textarea {
 
 span {
     text-decoration: underline;
+} */
+
+#mainTopic {
+    color: blue;
 }
+
+* {
+    text-align: center;
+}
+
+h1,
+h3,
+h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.content {
+    color: white;
+    background-color: cornflowerblue;
+}
+
+div button {
+    color: azure;
+    background-color: purple;
+}
+
+button:hover {
+    background-color: yellow;
+    color: blue;
+}
+
+p:nth-of-type(2n+1) {
+    color: yellow;
+}
+
+h1::first-letter {
+    color: red;
+}
+
+#yes:checked+label {
+    color: darkgreen;
+}
+
+
+
+/* 
+#mainContent
+div .main
+main
+h1
+*/
