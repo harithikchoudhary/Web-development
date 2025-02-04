@@ -1,0 +1,23 @@
+.box {
+    height: 850px;
+    width: 850px;
+    background-color: black;
+    color: white;
+    animation: fontAnimate;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+
+}
+
+@keyframes fontAnimate {
+    from {
+        font-size: 0.1px;
+    }
+
+    to {
+        font-size: 100px;
+    }
+}
