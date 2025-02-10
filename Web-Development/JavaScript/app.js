@@ -187,7 +187,100 @@ console.warn("This is console warning message");
 // let firstName = prompt("Enter your name : ");
 // alert(firstName);
 
-let firstName = prompt("Enter your name : ");
-let lastName = prompt("Enter you last name");
-let fullName = "Welcome " + firstName + " " + lastName + " !";
-alert(fullName);
+// let firstName = prompt("Enter your name : ");
+// let lastName = prompt("Enter you last name");
+// let fullName = "Welcome " + firstName + " " + lastName + " !";
+// alert(fullName);
+
+let no = 20;
+
+if (no % 10 == 0) {
+  console.log("good");
+} else {
+  console.log("bad");
+}
+
+// let names = prompt("Enter your name: ");
+// let ages = prompt("Enter your age: ");
+// alert(`${names} is ${ages} years old`);
+
+let quarter = 1;
+
+switch (quarter) {
+  case 1:
+    console.log("January, Febrauary, March");
+    break;
+  case 2:
+    console.log("April, May, June");
+    break;
+  case 3:
+    console.log("July, Auagust, September");
+    break;
+  case 4:
+    console.log("October, November, December");
+    break;
+
+  default:
+    console.log("Invalid input");
+}
+
+let strings = "Hrithik";
+
+if ((strings[0] == "A" || strings[0] == "a") && strings.length > 5) {
+  console.log("Good string");
+}
+
+//String Methods
+
+let msg = "    hello  ";
+let newStr = msg.trim();
+console.log(msg);
+console.log(newStr);
+
+let upper = msg.toUpperCase();
+console.log(upper);
+
+let low = "STRING";
+let lower = low.toLowerCase();
+console.log(lower);
+
+let index = "ilovecoding";
+let firstOccurance = index.indexOf("love");
+console.log(firstOccurance);
+
+let newMsg = msg.trim().toUpperCase();
+console.log(newMsg);
+
+let s = index.slice(5);
+let p = index.slice(0, 5);
+console.log(s);
+console.log(p);
+let j = index.slice(-3);
+console.log(j);
+
+//Replace()
+let strs = "I love coding";
+let newStrs = strs.replace("coding", "javascript");
+console.log(newStrs);
+console.log(strs);
+console.log(newStrs);
+
+//Repeat
+let st = "Hello";
+let newSt = st.repeat(3);
+console.log(newSt);
+
+//Practice qs
+let message = "help!";
+let newMessage = message.trim().toUpperCase();
+console.log(newMessage);
+
+let name = "ApnaCollege";
+let newName = name.slice(4, 9);
+console.log(newName);
+let nName = name.indexOf("na");
+console.log(nName);
+let rep = name.replace("Apna", "Our");
+console.log(rep);
+let repl = name.slice(4).replace("l", "t").replace("l", "t");
+console.log(repl);
