@@ -284,3 +284,159 @@ let rep = name.replace("Apna", "Our");
 console.log(rep);
 let repl = name.slice(4).replace("l", "t").replace("l", "t");
 console.log(repl);
+
+//<--------------------------------Arrays in JavaScript------------------------------------------>
+let student = ["Hrithtik", "Pooja", "Nidhi"];
+console.log(student[0]);
+console.log(student.length);
+
+//Mixed Array
+let infor = ["Hrithik", "25", "6.7"];
+console.log(infor[2]);
+
+//Empty Array
+let newArr = [];
+
+for (let i = 0; i < infor.length; i++) {
+  console.log(infor[i]);
+}
+
+//Arrays are Mutable in JavaScript
+let fruits = ["mango", "apple", "orange"];
+fruits.push("grapes");
+
+fruits[0] = "kiwi";
+console.log(fruits);
+fruits.pop();
+console.log(fruits);
+fruits.pop();
+console.log(fruits);
+fruits.pop();
+console.log(fruits);
+fruits.pop();
+console.log(fruits);
+
+//Arrya Methods
+//Push - Pop - Unshift - Shift
+let cars = ["maruti", "toyota", "hyundai"];
+cars.push("ford", "audi");
+console.log(cars);
+//pop
+cars.pop();
+console.log(cars);
+//shift
+cars.shift();
+console.log(cars);
+//unshift
+cars.unshift("bmw");
+console.log(cars);
+
+let blocked = cars.pop();
+console.log(blocked);
+let notAvaiable = cars.shift();
+console.log(notAvaiable);
+console.log(cars);
+
+// let month = ["january", "july", "march", "august"];
+// console.log(month);
+// month.shift();
+// month.shift();
+// month.unshift("june");
+// month.unshift("july");
+// console.log(month);
+
+//indexOf-includes
+let fruitss = ["mango", "apple", "orange"];
+console.log(fruitss.indexOf("apple")); //1
+console.log(fruitss.indexOf("Apple")); //true
+console.log(fruitss.includes("apple")); //true
+//includes  and indexOf both are case sensitive
+console.log(fruitss.includes("Apple")); //false
+
+//concat
+let primary = ["red", "green", "orange"];
+let secondary = ["blue", "yellow", "black"];
+console.log(primary.concat(secondary));
+
+//reverse
+let colorss = ["red", "green", "blue"];
+console.log(colorss.reverse());
+
+//slice
+let slices = ["red", "green", "blue", "yellow", "black"];
+console.log(slices.slice(1, 3)); //green, blue
+console.log(slices.slice(1)); //green, blue, yellow, black
+console.log(slices.slice(-2));
+//splice
+let splices = ["red", "green", "blue", "yellow", "black"];
+console.log(splices.splice(1, 2)); //green, blue
+//splice returns an array of the deleted elements
+console.log(splices); //red, yellow, black
+
+//sort
+
+let sortss = ["red", "green", "blue"];
+console.log(sortss.sort());
+//sort is case sensitive
+let nos = [4, 3, 7, 9, 100];
+console.log(nos.sort());
+
+//Practice Question
+let month = ["january", "july", "march", "august"];
+// console.log(month.splice(0, 1));
+// console.log(month);
+// console.log(month.splice(1, 0, "june"));
+// console.log(month);
+console.log(month.splice(0, 2, "july", "june"));
+console.log(month);
+
+let languages = [
+  "c",
+  "c++",
+  "html",
+  "javascript",
+  "python",
+  "java",
+  "c#",
+  "sql",
+];
+console.log(languages.reverse().indexOf("javascript"));
+console.log(languages);
+
+//Array References
+let arr = ["a", "b"];
+let arrCopy = arr;
+arrCopy.push("c");
+console.log(arrCopy);
+console.log(arr);
+arr.pop();
+console.log(arr);
+console.log(arrCopy);
+
+const arry = [1, 2, 3];
+console.log(arry);
+arry.push(4);
+arry.pop();
+arry.pop();
+arry.pop();
+arry.pop();
+arry.push(10);
+arry.push(11);
+arry.push(12);
+
+console.log(arry);
+
+//Nested Array
+let nestedArray = [
+  [1, 2],
+  [3, 4],
+  [5, 6, 7],
+];
+console.log(nestedArray);
+
+let tic = [
+  ["X", null, "O"],
+  [null, "X", null],
+  ["O", null, "X"],
+];
+console.log(tic);
