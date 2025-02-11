@@ -440,3 +440,88 @@ let tic = [
   ["O", null, "X"],
 ];
 console.log(tic);
+
+//First n positive no
+let array = [-2, 9, 0, 1];
+let n = 3;
+
+let ans = array.splice(arr.length - n);
+console.log(ans);
+
+// let strr = prompt("Please enter a string:");
+
+// if (strr.length == 0) {
+//   console.log("String is empty");
+// } else {
+//   console.log("String is not empty");
+// }
+
+// let strrr = "ApnACollege";
+// let idx = 3;
+
+// if (str[idx] == str[idx].toLowerCase()) {
+//   console.log("character is lowercase");
+// } else {
+//   console.log("character is not lowercase");
+// }
+
+//for loop
+//for(initialisation; condition; updation){
+//do something
+//}
+
+for (let i = 0; i <= 5; i++) {
+  console.log(i);
+}
+
+for (let i = 2; i <= 10; i = i + 2) {
+  console.log(i);
+}
+
+for (let i = 1; i <= 15; i = i + 2) {
+  console.log(i);
+}
+
+// let nn = prompt("Wrie a number");
+// nn = parseInt(nn);
+// for (let i = nn; i <= nn * 10; i = i + nn) {
+//   console.log(i);
+// }
+
+for (let i = 1; i <= 3; i++) {
+  console.log(`outer loop ${i}`);
+  for (let j = 1; j <= 3; j++) {
+    console.log(`inner loop ${j}`);
+  }
+}
+
+// let i = 1;
+// while(i<=5){
+//     console.log(i);
+//     i++;
+// }
+
+let i = 0;
+while (i <= 20) {
+  console.log(i);
+  i = i + 2;
+}
+
+let k = 1;
+while (k <= 20) {
+  console.log(k);
+  k = k + 2;
+}
+
+let favourite = "Avatar";
+let guess = prompt("Enter my favourite movie: ");
+while (guess != favourite && guess != "quit") {
+  console.log("wrong");
+  guess = prompt("Enter again:");
+}
+
+if (guess == favourite) {
+  console.log("Congratulation!! you guessed it right");
+} else {
+  console.log("You Quit");
+}
