@@ -516,8 +516,7 @@ while (k <= 20) {
 let favourite = "Avatar";
 let guess = prompt("Enter my favourite movie: ");
 while (guess != favourite && guess != "quit") {
-  console.log("wrong");
-  guess = prompt("Enter again:");
+  guess = prompt("wrong guess!! Please try again:");
 }
 
 if (guess == favourite) {
@@ -525,3 +524,36 @@ if (guess == favourite) {
 } else {
   console.log("You Quit");
 }
+
+//Loops with arrays
+
+let freshFruits = ["mango", "banana", "litchi", "apple", "kiwi"];
+for (let i = 0; i < freshFruits.length; i++) {
+  console.log(i, freshFruits[i]);
+}
+
+for (let i = freshFruits.length - 1; i >= 0; i--) {
+  console.log(i, freshFruits[i]);
+}
+
+//Nested Loops with Nested Arrays
+let heroes = [
+  ["ironman", "spiderman", "thor"],
+  ["superman", "wonder woman", "flash"],
+];
+
+for (let i = 0; i < heroes.length; i++) {
+  console.log(`List ${i}`);
+  for (let j = 0; j < heroes[i].length; j++) {
+    console.log(heroes[i][j]);
+  }
+}
+
+let sums = 0;
+for (let char of "18") {
+  console.log(`Character: ${char}`);
+  sums += Number(char);
+}
+console.log(`Sum of digits: ${sums}`);
+
+//Todo App Using JavaScript
