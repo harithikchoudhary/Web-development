@@ -556,4 +556,12 @@ for (let char of "18") {
 }
 console.log(`Sum of digits: ${sums}`);
 
-//Todo App Using JavaScript
+//JavaScript program to delete all occurrences of element num in a given array.
+let arrs = [1, 2, 3, 4, 5, 4];
+let nums = 2;
+for (let i = 0; i < arrs.length; i++) {
+  if (nums == arrs[i]) {
+    arrs.splice(i, 1);
+  }
+}
+console.log(arrs);
