@@ -159,3 +159,81 @@ let mul = function (add, sub) {
 };
 
 console.log(mul(result1, result2));
+
+//Higher Order Functions
+//A function that takes another function as an argument is called a higher order function
+//A function that returns another function is also a higher order function
+let greeting = function () {
+  console.log("hello");
+};
+
+function multipleGreet(func, count) {
+  for (let i = 1; i <= count; i++) {
+    func();
+  }
+}
+
+multipleGreet(greeting, 10);
+
+let odd = function (n) {
+  console.log(!(n % 2 == 0));
+};
+odd(5);
+
+let even = function (n) {
+  console.log(n % 2 == 0);
+};
+even(6);
+
+function oddOrEvenFactory(request) {
+  if (request == "odd") {
+    let odd = function (n) {
+      console.log(!(n % 2 == 0));
+    };
+    return odd;
+  } else if (request == "even") {
+    let even = function (n) {
+      console.log(n % 2 == 0);
+    };
+    return even;
+  } else {
+    console.log("wrong answer");
+  }
+}
+
+let request = "even";
+
+//Methods
+//Methods are functions that belong to an object
+//They are used to perform operations on the object
+
+const calculator = {
+  add: function (a, b) {
+    return a + b;
+  },
+  sub: function (a, b) {
+    return a - b;
+  },
+  mul: function (a, b) {
+    return a * b;
+  },
+};
+
+//Accessing methods
+//Methods are accessed using the dot notation
+console.log(calculator.add(5, 10));
+//or
+const addition = calculator.add;
+console.log(add(5, 10));
+
+//Methods shorthand
+//Methods can be defined using the shorthand syntax
+//The shorthand syntax is a shorter way of defining methods
+const calculatorShorthand = {
+  add(a, b) {
+    return a + b;
+  },
+  sub(a, b) {
+    return a - b;
+  },
+};
