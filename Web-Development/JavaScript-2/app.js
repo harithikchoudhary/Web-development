@@ -137,26 +137,53 @@ let number = Math.floor(Math.random() * 5) + 20;
 console.log(number);
 
 //Guessing Game
-const max = prompt("Enter a max no: ");
+// const max = prompt("Enter a max no: ");
 
-const randomNo = Math.floor(Math.random() * max) + 1;
-console.log(randomNo);
+// const randomNo = Math.floor(Math.random() * max) + 1;
+// console.log(randomNo);
 
-let guess = prompt("Guess the number");
+// let guess = prompt("Guess the number");
 
-while (true) {
-  if (guess == "quit") {
-    console.log("user quit");
-    break;
-  }
-  if (guess == randomNo) {
-    alert("You won");
-    break;
-  } else if (guess < randomNo) {
-    guess = prompt("Hint:Your guess was too small! please try again");
-  } else if (guess > randomNo) {
-    guess = prompt("Hint: Your no is too large!please try again");
-  } else {
-    guess = prompt("Invalid input");
-  }
-}
+// while (true) {
+//   if (guess == "quit") {
+//     console.log("user quit");
+//     break;
+//   }
+//   if (guess == randomNo) {
+//     alert("You won");
+//     break;
+//   } else if (guess < randomNo) {
+//     guess = prompt("Hint:Your guess was too small! please try again");
+//   } else if (guess > randomNo) {
+//     guess = prompt("Hint: Your no is too large!please try again");
+//   } else {
+//     guess = prompt("Invalid input");
+//   }
+// }
+
+//Dice roll Game
+let dice = Math.floor(Math.random() * 6) + 1;
+console.log(dice);
+
+const car = {
+  name: "BMW",
+  model: "X5",
+  year: 2020,
+  color: "Black",
+};
+
+//Create
+// an
+// objectPersonwiththeirname,ageandcity.Edittheircity’soriginalvaluetochangeitto“NewYork”.AddanewpropertycountryandsetittotheUnitedStates.harithikchoudhary6@gmail.com
+
+const Person = {
+  name: "Rahul",
+  age: 25,
+  city: "Delhi",
+  country: "India",
+};
+
+console.log(Person);
+Person.country = "USA";
+Person.city = "New York";
+console.log(Person);
