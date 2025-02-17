@@ -237,3 +237,87 @@ const calculatorShorthand = {
     return a - b;
   },
 };
+
+let arr = [1, 16, 18, 20, 24, 30, 2, 5, 9];
+let n = 16;
+//Function to return an larger than a number
+function largerNumber(arr, n) {
+  let larger = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > n) {
+      // larger[i] = arr[i];
+      larger.push(arr[i]);
+    }
+  }
+  return larger;
+}
+console.log(largerNumber(arr, n));
+
+//or
+//Function to return an larger than a number
+function getElements(arr, n) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > n) {
+      console.log(arr[i]);
+    }
+  }
+}
+console.log(getElements(arr, n));
+
+//Function to return a unique string
+let stringq = "ababcddefghhij";
+function getUnique(stringq) {
+  let uniqueString = "";
+  for (let i = 0; i < stringq.length - 1; i++) {
+    let currentChar = stringq[i];
+    if (uniqueString.indexOf(currentChar) == -1) {
+      uniqueString += currentChar;
+    }
+  }
+  return uniqueString;
+}
+console.log(getUnique(stringq));
+
+//Function that accepts a list of country
+// names as input and returns the longest country name as output
+
+let country = ["India", "USA", "China", "Japan", "France"];
+function longestCountry(country) {
+  let largestIndex = 0;
+  for (let i = 1; i < country.length; i++) {
+    if (country[i].length > country[largestIndex].length) {
+      largestIndex = i;
+    }
+  }
+  return country[largestIndex];
+}
+console.log(longestCountry(country));
+
+//Function to count vowels in a string;
+
+let stringw = "Aeiouuuuuu";
+
+function countVowels(stringw) {
+  //let vowels = ["a","e","i","o","u"];
+  let vowels = new Set(["a", "e", "i", "o", "u"]);
+  let count = 0;
+  for (let i = 0; i < stringw.length; i++) {
+    //if(vowels.includes(stringw[i].toLowerCase())) - O(n)
+    if (vowels.has(stringw[i].toLowerCase())) {
+      //O(1)
+      count++;
+    }
+  }
+  return count;
+}
+console.log(countVowels(stringw));
+
+//Generate a random no within a range
+let start = 100;
+let end = 150;
+function generateRandom(start, end) {
+  let diff = end - start;
+  return Math.floor(Math.random() * diff) + start;
+}
+
+console.log(generateRandom(start, end));
