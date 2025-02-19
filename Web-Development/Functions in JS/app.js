@@ -321,3 +321,198 @@ function generateRandom(start, end) {
 }
 
 console.log(generateRandom(start, end));
+
+//this keyword in java
+//this keyword is used to refer to the current object of the class.
+//it is used to access the properties and methods of the current class.
+//it is used to call the constructor of the current class.
+const student = {
+  name: "Hrithik",
+  age: 24,
+  physics: 97,
+  math: 93,
+  english: 95,
+  getAvg() {
+    let avg = (this.physics + this.english + this.math) / 3;
+    console.log(avg);
+  },
+};
+
+console.log(student.getAvg());
+
+//try and catch block
+try {
+  console.log(a);
+} catch {
+  console.log("a is not defined");
+}
+
+//Arrow Functions
+const sumi = (a, b) => {
+  console.log(a + b);
+};
+
+const cube = (n) => {
+  return n * n * n;
+};
+
+const pow = (a, b) => {
+  return a ** b;
+};
+
+//Arrow Fucntions Implicit Return
+const multiply = (a, b) => a * b;
+
+//setTimeout
+// console.log("Welcome");
+// setTimeout(() => {
+//   console.log("Hrithik Choudhary");
+// }, 4000);
+// console.log("Hi");
+
+//setInterval
+
+// let id = setInterval(() => {
+//   console.log("SetInterval");
+// }, 2000);
+// console.log(id);
+
+// clearInterval(2);
+
+//Arrow function with this keyword
+
+const students = {
+  name: "Hrithik",
+  age: 20,
+  prop: this, //global scope
+  getName: function () {
+    console.log(this);
+    return this.name;
+  },
+
+  getAge: () => {
+    console.log(this);
+    return this.age; //global scope
+  },
+};
+
+//Arrow function return square of a number n
+const square = (n) => n * n;
+
+console.log(square(4));
+
+//Arrow Function named isEven()
+let isEven = (n) => {
+  if (n % 2 == 0) {
+    return "Number is even";
+  } else {
+    return "Number is odd";
+  }
+};
+
+//Arrow function named arrayAverage that accepts array of numbers and return averga of those numbers
+let arrayAverage = (arr) => {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+
+//Array methods
+//forEach() method
+let arrays = [1, 2, 3, 4, 5];
+
+let print = function (el) {
+  console.log(el);
+};
+arrays.forEach(print);
+//or
+arrays.forEach(function (el) {
+  console.log(el);
+});
+
+//or with arrow
+
+arrays.forEach((el) => console.log(el));
+
+let ar = [
+  {
+    name: "Hrithik",
+    marks: 95,
+  },
+  {
+    name: "Pooja",
+    marks: 99,
+  },
+  { name: "Mohan", marks: 91 },
+];
+
+ar.forEach((student) => {
+  console.log(student.name);
+});
+
+//map
+
+let no = [1, 2, 3, 4];
+
+let double = no.map((el) => {
+  return el * el;
+});
+console.log(double);
+
+let studen = [
+  {
+    name: "Hrithik",
+    marks: 95,
+  },
+  {
+    name: "Pooja",
+    marks: 99,
+  },
+  { name: "Mohan", marks: 91 },
+];
+
+let gpa = studen.map((el) => {
+  return el.marks / 10;
+});
+console.log(gpa);
+
+//Filter()
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+let evenNo = num.filter((num) => {
+  return num % 2 == 0;
+});
+
+console.log(evenNo);
+
+//Every()
+
+let oddNumbers = [1, 3, 5, 7];
+
+let everyNo = oddNumbers.every((num) => {
+  return num % 2 != 0;
+});
+
+console.log(everyNo);
+
+//Reduce
+
+let reducedArray = [1, 2, 3, 4];
+let reduceNo = reducedArray.reduce((res, el) => res * el);
+
+console.log(reduceNo);
+
+//Maximum value through reduce
+
+let maxArray = [1, 2, 6, 4, 7, 8, 9, 3];
+
+let max = maxArray.reduce((max, el) => {
+  if (max < el) {
+    return el;
+  } else {
+    return max;
+  }
+});
+
+console.log(max);
