@@ -516,3 +516,90 @@ let max = maxArray.reduce((max, el) => {
 });
 
 console.log(max);
+
+//Find Minimum value
+function getMin(nums) {
+  let min = nums.reduce((min, el) => {
+    if (min < el) {
+      return min;
+    } else {
+      return el;
+    }
+  });
+  return min;
+}
+
+let nums = [1, 2, 4, 7, 0, 10];
+console.log(getMin(nums));
+
+//Default parameter
+function sum(a, b = 2) {
+  return a + b;
+}
+console.log(sum(10));
+
+//try to use default parameter at the end
+
+//Spread
+let myName = "Hrithik";
+console.log(...nums);
+console.log(Math.min(...nums));
+console.log(...myName);
+
+let oddNo = [1, 3, 5, 7, 9];
+let evenNos = [2, 4, 6, 8, 10];
+
+let oddEven = [...evenNos, ...oddNo];
+console.log(oddEven);
+
+//Spread with Object Literals
+const data = {
+  email: "hrithik@gmail.con",
+  password: "abcd",
+};
+
+const dataCopy = { ...data, id: 123, country: "India" };
+console.log(dataCopy);
+
+//storing array in object through spread
+let arrayNo = [9, 4, 5, 2, 4];
+const obj1 = { ...arrayNo };
+console.log(obj1);
+const obj2 = { ..."hello" };
+console.log(obj2);
+
+//Rest
+
+function addOn(...sum) {
+  for (let i = 0; i < arguments.length; i++) {
+    console.log(args[i]);
+  }
+}
+
+function minimum() {
+  console.log(arguments);
+}
+
+console.log(minimum(1, 2, 3, 4));
+
+//Destructuring
+//Stroing values of array into multiple variables
+
+let names = ["tony", "bruce", "steve", "peter"];
+let [winner, runnerup, ...others] = names;
+console.log(winner);
+
+//Object Destrcuturing
+const obj3 = {
+  name: "Hrithik",
+  age: 24,
+  company: "UST",
+  username: "hrithik@123",
+  password: "abcd",
+};
+
+let { username, password } = obj3;
+let { company: currentCompany } = obj3;
+console.log(currentCompany);
+
+console.log(username, password);
