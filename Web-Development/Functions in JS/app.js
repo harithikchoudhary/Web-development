@@ -603,3 +603,22 @@ let { company: currentCompany } = obj3;
 console.log(currentCompany);
 
 console.log(username, password);
+
+//SSquare array and fin average
+let squareOf = nums.map((el) => el * el);
+console.log(squareOf);
+
+let total = squareOf.reduce((acc, el) => acc + el);
+console.log(total);
+let average = total / squareOf.length;
+console.log(average);
+
+//new array
+let newArray = nums.map((nums) => nums + 5);
+console.log(newArray);
+
+//uppercase
+let stringa = ["adama", "bob"];
+let upperArray = stringa.map((s) => s.toUpperCase());
+
+console.log(upperArray);
