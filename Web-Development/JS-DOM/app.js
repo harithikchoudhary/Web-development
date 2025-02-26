@@ -197,3 +197,22 @@ div.append(para2);
 document.querySelector("body").appendChild(div);
 div.style.backgroundColor = "pink";
 div.style.border = "1px solid black";
+
+// Create a new input and button element on the page using JavaScript only.
+// The input should be a text input and the button should say "Click me!".
+
+let button = document.createElement("button");
+let input = document.createElement("input");
+button.innerText = " Click me!";
+document.querySelector("body").append(input);
+document.querySelector("body").append(button);
+
+document.setAttribute("placeholder", "username");
+document.setAttribute("id", "btn");
+
+let btn = document.querySelector("#btn");
+button.style.backgroundColor = "white";
+
+let heading = document.createElement("h1");
+heading.innerHTML = "<u>DOM Practice!</u>";
+heading.style.color = "purple";
