@@ -77,18 +77,65 @@
 //   console.log("Key was pressed");
 // });
 
+// let form = document.querySelector("form");
+
+// form.addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   alert("Registered Successfully");
+// });
+//
+
 let form = document.querySelector("form");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-  alert("Registered Successfully");
+
+  //   let user = document.querySelector("#user");
+  //   let pass = document.querySelector("#pass");
+  let user = this.elements[0].value;
+  let pass = this.elements[1].value;
+  console.log(user);
+  console.log(pass);
 });
 
+let inpu = document.querySelector("#text");
 let p = document.querySelector("p");
 
-let inp = document.querySelector("#text");
+inpu.addEventListener("input", function () {
+  console.log(inpu.value);
+  p.innerText = inpu.value;
+});
 
-inp.addEventListener("input", function () {
-  console.log(inp.value);
-  p.innerText = inp.value;
+inpu.addEventListener("mouseout", function () {
+  console.log("Mouse is out of the input field");
+});
+
+inpu.addEventListener("keypress", function () {
+  console.log("key was pressed");
+});
+
+window.addEventListener("scroll", function () {
+  console.log("Scrolling");
+});
+
+window.addEventListener("load", function () {
+  console.log("Page is loaded");
+});
+
+let butto = document.createElement("button");
+
+butto.innerText = "Click me";
+
+butto.addEventListener("click", function () {
+  butto.style.backgroundColor = "green";
+});
+
+document.body.append(butto);
+
+let inputField = document.querySelector("#name");
+let h2 = document.querySelector("h2");
+
+inputField.addEventListener("input", function () {
+  this.value = this.value.replace(/[^a-zA-Z ]/g, "");
+  h2.innerText = inputField.value;
 });
