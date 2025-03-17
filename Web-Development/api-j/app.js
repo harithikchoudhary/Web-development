@@ -14,7 +14,7 @@
 
 // let jsonStudent = JSON.stringify(student);
 // console.log(jsonStudent);
-let url = "https://catfact.ninja/fact";
+// let url = "https://catfact.ninja/fact";
 // fetch(url)
 //   .then((res) => {
 //     console.log(res);
@@ -40,46 +40,61 @@ let url = "https://catfact.ninja/fact";
 //   }
 // }
 
-let btn = document.querySelector("button");
+// let btn = document.querySelector("button");
 
-btn.addEventListener("click", async () => {
-  let facts = await getFacts();
-  let p = document.querySelector("#result");
-  p.innerText = facts;
-});
-async function getFacts() {
-  try {
-    let res = await axios.get(url);
-    return res.data.fact;
-  } catch (e) {
-    console.log(e);
-    return "No Fact Found";
-  }
-}
+// btn.addEventListener("click", async () => {
+//   let facts = await getFacts();
+//   let p = document.querySelector("#result");
+//   p.innerText = facts;
+// });
+// async function getFacts() {
+//   try {
+//     let res = await axios.get(url);
+//     return res.data.fact;
+//   } catch (e) {
+//     console.log(e);
+//     return "No Fact Found";
+//   }
+// }
 
-const jokeUrl = "https://icanhazdadjoke.com/";
+// const jokeUrl = "https://icanhazdadjoke.com/";
 
-async function getJokes() {
-  try {
-    const config = { headers: { Accept: "application/json" } };
-    let jokes = await axios.get(jokeUrl, config);
-    console.log(jokes.data.joke);
-    return jokes.data;
-  } catch (e) {
-    console.log(e);
-    return "No Jokes Found";
-  }
-}
+// async function getJokes() {
+//   try {
+//     const config = { headers: { Accept: "application/json" } };
+//     let jokes = await axios.get(jokeUrl, config);
+//     console.log(jokes.data.joke);
+//     return jokes.data;
+//   } catch (e) {
+//     console.log(e);
+//     return "No Jokes Found";
+//   }
+// }
 
 let randomUrl = "http://universities.hipolabs.com/search?name=";
+let btns = document.querySelector("button");
+btns.addEventListener("click", async () => {
+  let country = document.querySelector("input").value;
+  let colleges = await getColleges(country);
+  show(colleges);
+});
 
-let country = "nepal";
+function show(colleges) {
+  let list = document.querySelector("#list");
+  list.innerText = "";
+  for (let col of colleges) {
+    let li = document.createElement("li");
+    li.innerText = col.name;
+    list.appendChild(li);
+  }
+}
 
-async function getColleges() {
+async function getColleges(country) {
   try {
     let res = await axios.get(randomUrl + country);
-    console.log(res.data);
+    return res.data;
   } catch (e) {
     console.log(e);
+    return [];
   }
 }
