@@ -25,3 +25,9 @@ app.get("/home", (req, res) => {
 
 //Nodemon
 //For restarting the server automatically
+
+//Query Strings
+app.get("/search", (req, res) => {
+  console.log(req.query);
+  res.send("no results");
+});
