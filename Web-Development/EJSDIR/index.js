@@ -17,3 +17,8 @@ app.get("/hell", (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+app.get("/ig/:username", (req, res) => {
+  let { username } = req.params;
+  res.render("instagram.ejs", { username });
+});
